@@ -1,0 +1,2 @@
+# Portfolio
+ Este é o início da minha jornada profissional. Um espaço onde reúno meus primeiros trabalhos, experiências e aprendizados. Aqui, você encontrará projetos que refletem não apenas o que eu sei fazer, mas também quem eu sou, minha visão de mundo e minha vontade constante de evoluir. Cada item apresentado carrega dedicação, curiosidade e um olhar atento aos detalhes. Este portfólio é o ponto de partida de uma trajetória promissora — e a prova de que estou apenas começando.
