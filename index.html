@@ -3,33 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Pedro Arthur | Portfólio</title>
   </head>
   <body>
     <nav class="navegacao">
       <ul class="menu">
         <li>
-          <a href="#inicio">Início</a>
+          <a href="#inicio" class="menu-link">Início</a>
         </li>
         <li>
-          <a href="#sobre">Sobre</a>
+          <a href="#sobre" class="menu-link">Sobre</a>
         </li>
         <li>
-          <a href="#projetos">Projetos</a>
+          <a href="#projetos" class="menu-link">Projetos</a>
         </li>
         <li>
-          <a href="#contato">Contato</a>
+          <a href="#contato" class="menu-link">Contato</a>
         </li>
       </ul>
     </nav>
 
     <main id="inicio" class="cabecalho">
-      <div>
-        <img src="./img/img-perfil.jpg" alt="Minha foto de perfil" />
-        <h1>Pedro Arthur</h1>
-        <p>Desenvolvedor Front End</p>
-      </div>
+      <img
+        src="./img/img-perfil.jpg"
+        alt="Minha foto de perfil"
+        class="foto-perfil"
+      />
+      <h1>Pedro Arthur</h1>
+      <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
     </main>
 
     <section id="sobre" class="sobre">
@@ -47,58 +49,69 @@
     <section id="projetos" class="projetos">
       <h2 class="projetos-titulo">Meus Projetos</h2>
       <div class="projetos-caixa">
-
         <div class="projetos-card">
           <img
             src="./img/img-clima.png"
             alt="Projeto 1"
             class="projetos-imagem"
           />
-          <h3 class="info-projetos">Projeto 1</h3>
-          <p class="paragrafos-projeto">
+          <div class="caixa-texto-projetos">
+            <h3 class="info-projetos">Projeto 1</h3>
+            <p class="paragrafos-projeto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             sunt officia assumenda id minima, ex cupiditate ipsa natus adipisci
-          </p>
+            </p>
+          </div>
+        </div>
 
-        <div class="projetos-card">
-          <img
-            src="./img/img-clima.png"
-            alt="Projeto 1"
-            class="projetos-imagem"
-          />
-          <h3 class="info-projetos">Projeto 1</h3>
-          <p class="paragrafos-projeto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            sunt officia assumenda id minima, ex cupiditate ipsa natus adipisci
-          </p>
+          <div class="projetos-card">
+            <img
+              src="./img/img-clima.png"
+              alt="Projeto 1"
+              class="projetos-imagem"
+            />
+            <div class="caixa-texto-projetos">
+              <h3 class="info-projetos">Projeto 1</h3>
+              <p class="paragrafos-projeto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio sunt officia assumenda id minima, ex cupiditate ipsa
+              natus adipisci
+              </p>
+            </div>
+          </div>
 
-        <div class="projetos-card">
-          <img
-            src="./img/img-clima.png"
-            alt="Projeto 1"
-            class="projetos-imagem"
-          />
-          <h3 class="info-projetos">Projeto 1</h3>
-          <p class="paragrafos-projeto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            sunt officia assumenda id minima, ex cupiditate ipsa natus adipisci
-          </p>
-
+          <div class="projetos-card">
+            <img
+              src="./img/img-clima.png"
+              alt="Projeto 1"
+              class="projetos-imagem"
+            />
+            <div class="caixa-texto-projetos">
+              <h3 class="info-projetos">Projeto 1</h3>
+              <p class="paragrafos-projeto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio sunt officia assumenda id minima, ex cupiditate ipsa
+              natus adipisci
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contato</h2>
-        <form class="formulario-contato" id="formulario">
-            <div class="nome-form">
-            <input placeholder="Nome" class="campo-form">
-            </div>
-            <div class="grupo-form">
-            <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
-            </div>
-        </form>
-
+      <h2 class="contatos-titulo">Contato</h2>
+      <form class="formulario-contato" id="formulario">
+        <div class="nome-form">
+          <input placeholder="Nome" class="campo-form" />
+        </div>
+        <div class="grupo-form">
+          <textarea
+            class="text-form"
+            placeholder="Digite sua mensagem"
+          ></textarea>
+        </div>
+      </form>
     </section>
   </body>
 </html>
