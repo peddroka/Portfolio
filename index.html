@@ -7,6 +7,8 @@
     <title>Pedro Arthur | Portfólio</title>
   </head>
   <body>
+    <div class="matrix-background"></div>
+
     <nav class="navegacao">
       <ul class="menu">
         <li>
@@ -19,7 +21,7 @@
           <a href="#projetos" class="menu-link">Projetos</a>
         </li>
         <li>
-          <a href="#contato" class="menu-link">Contato</a>
+          <a href="#contatos" class="menu-link">Contato</a>
         </li>
       </ul>
     </nav>
@@ -38,10 +40,7 @@
       <h2 class="sobre-titulo">Sobre mim</h2>
       <div class="sobre-caixa">
         <p class="sobre-paragrafo">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad cumque,
-          corrupti illo dignissimos eligendi dolore dicta quisquam ex sed! Id
-          tempore eaque commodi fugiat optio fugit, omnis ratione facere
-          veritatis?
+          Sou um programador front-end júnior em início de carreira, focado em aprender e evoluir todos os dias. Estou construindo minha base em HTML, CSS, JavaScript e React, buscando criar interfaces simples, funcionais e bem-feitas. Ainda estou ganhando experiência, mas levo cada projeto como uma chance real de crescer.
         </p>
       </div>
     </section>
@@ -100,18 +99,55 @@
     </section>
 
     <section id="contatos" class="contatos">
-      <h2 class="contatos-titulo">Contato</h2>
-      <form class="formulario-contato" id="formulario">
-        <div class="nome-form">
-          <input placeholder="Nome" class="campo-form" />
+      <h2 class="contatos-titulo">Entre em contato</h2>
+      <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+        <div class="grupo-form">
+          <input placeholder="Nome" class="campo-form" id="nome" />
         </div>
         <div class="grupo-form">
-          <textarea
-            class="text-form"
-            placeholder="Digite sua mensagem"
-          ></textarea>
+          <textarea class="campo-form"placeholder="Digite sua mensagem" rows="5" id="mensagem"></textarea>
         </div>
+        <button type="submit" class="botao-form">Enviar Whatsapp</button>
       </form>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const matrixBg = document.querySelector('.matrix-background');
+        const chars = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
+        const columnWidth = 20;
+        const columns = Math.floor(window.innerWidth / columnWidth);
+        
+        for (let i = 0; i < columns; i++) {
+          const col = document.createElement('div');
+          col.className = 'matrix-column';
+          col.style.left = `${i * columnWidth}px`;
+          col.style.animationDuration = `${10 + Math.random() * 20}s`;
+          col.style.animationDelay = `${Math.random() * 5}s`;
+          
+          let columnContent = '';
+          for (let j = 0; j < 50; j++) {
+            columnContent += chars[Math.floor(Math.random() * chars.length)] + '\n';
+          }
+          col.textContent = columnContent;
+          
+          matrixBg.appendChild(col);
+        }
+      });
+
+      function enviarWhats(event) {
+        event.preventDefault()
+
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '5582988543864';
+
+        const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+        window.open(url, "_blank")
+      }
+    </script>
   </body>
 </html>

@@ -54,7 +54,7 @@ body {
   width: 100%;
 }
 .cabecalho {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +66,7 @@ body {
   box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
   border-radius: 50%;
   border: 4px solid var(--vidro);
+  animation: flutuar 5s ease-in-out infinite;
 }
 
 h1 {
@@ -142,4 +143,93 @@ h1 {
 }
 .info-projetos {
   margin-bottom: 5px;
+}
+.contatos {
+  padding: 6rem 2rem;
+}
+.contatos-titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+.formulario-contato {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  border: 1px solid var(--vidro);
+  border-radius: 16px;
+}
+.campo-form {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--vidro);
+  color: var(--claro);
+  outline: none;
+}
+.campo-form:focus {
+  border-color: var(--color2);
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+.grupo-form {
+  margin-bottom: 1.5rem;
+}
+.botao-form {
+  color: var(--claro);
+  background: linear-gradient(45deg, var(--colo1), var(--color2));
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.botao-form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+/* EFEITO MATRIX - FUNDO ANIMADO */
+.matrix-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  color: var(--claro);
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  user-select: none;
+  text-shadow: 0 0 8px currentColor;
+  animation: matrix-fall linear infinite;
+}
+
+@keyframes matrix-fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
