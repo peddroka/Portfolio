@@ -81,6 +81,8 @@ h1 {
 }
 .sobre {
   padding: 6rem 2rem;
+  padding-top: 1rem; /* ou ajuste como quiser */
+  padding-bottom: 8rem; /* ou ajuste como quiser */
 }
 .sobre-titulo {
   font-size: 3rem;
