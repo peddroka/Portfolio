@@ -98,7 +98,7 @@ h1 {
   background: rgba(255, 255, 255, 0.05);
 }
 .sobre-paragrafo {
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
 }
 .projetos {
@@ -132,7 +132,37 @@ h1 {
   height: 100%;
   z-index: 10;
   text-decoration: none;
-  /* invisível, mas clicável */
+}
+.linguagens {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 1rem 2rem;
+}
+.linkedinl-img {
+  width: 70px;
+  height: auto;
+  margin-left: 250px;
+}
+.github-img {
+  width: 60px;
+  height: auto;
+}
+.html-img {
+  width: 60px;
+  height: auto;
+  margin-left: 65px;
+}
+
+.css-img {
+  width: 44px;
+  height: auto;
+}
+
+.js-img {
+  width: 60px;
+  height: auto;
 }
 .projetos-titulo {
   text-align: center;
@@ -300,5 +330,161 @@ h1 {
 
   .cabecalho-sub-titulo {
     font-size: 1rem;
+  }
+}
+/* Container dos botões */
+.botoes-contato {
+  display: flex;
+  gap: 1.5rem; /* Espaço entre os botões */
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Estilo base dos botões */
+.botao-linkedin1,
+.botao-github2 {
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 120px; /* Largura mínima para uniformidade */
+}
+
+/* Botão LinkedIn */
+.botao-linkedin1 {
+  background-color: var(--colo1);
+  color: white;
+  border: 2px solid var(--colo1);
+}
+
+.botao-linkedin1:hover {
+  background-color: var(--color2);
+  border-color: var(--color2);
+}
+
+/* Botão GitHub */
+.botao-github2 {
+  background-color: var(--colo1);
+  color: white;
+  border: 2px solid var(--colo1);
+}
+
+.botao-github2:hover {
+  background-color: var(--color2);
+  border-color: var(--color2);
+}
+.botoes-projeto {
+  display: flex;
+  gap: 1rem; /* Espaço entre os botões */
+  justify-content: center; /* Centraliza os botões */
+  margin-top: 1rem; /* Espaço acima dos botões */
+  margin-bottom: 1rem;
+  padding: 0 1rem; /* Padding lateral para mobile */
+}
+
+/* Estilo base dos botões */
+.botao-site,
+.botao-github {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botão "Ver Site" */
+.botao-site {
+  background-color: var(--colo1);
+  color: white;
+  border: 2px solid var(--color1);
+}
+
+.botao-site:hover {
+  background-color: var(--color2);
+  border-color: var(--colo2);
+}
+
+/* Botão "GitHub" */
+.botao-github {
+  background-color: var(--colo1);
+  color: white;
+  border: 2px solid var(--color1);
+}
+
+.botao-github:hover {
+  background-color: var(--color2);
+  border-color: var(--colo2);
+}
+/* Ajustes para tablets */
+@media (max-width: 1024px) {
+  .linkedinl-img {
+    width: 60px;
+    margin-left: 250px;
+  }
+  .github-img {
+    width: 50px;
+  }
+  .html-img {
+    width: 60px;
+    height: auto;
+    margin-left: 70px;
+  }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 780px) {
+  .linkedinl-img {
+    width: 80px;
+    margin-left: 35px;
+  }
+  .github-img {
+    width: 45px;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+  .linkedinl-img {
+    width: 80px;
+    margin-left: 15px;
+  }
+  .github-img {
+    width: 75px;
+  }
+}
+@media (max-width: 420px) {
+  .html-img {
+    width: 60px;
+    height: auto;
+    margin-left: 60px;
+  }
+}
+@media (max-width: 400px) {
+  .html-img {
+    width: 60px;
+    height: auto;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 380px) {
+  .linkedinl-img {
+    width: 80px;
+    margin-left: 8px;
+  }
+  .github-img {
+    width: 75px;
+  }
+}
+@media (max-width: 380px) {
+  .html-img {
+    width: 60px;
+    height: auto;
+    margin-left: 30px;
   }
 }
